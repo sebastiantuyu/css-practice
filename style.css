@@ -9,9 +9,9 @@ html,body{
 .container{
     display: grid;
     height: 100vh;
-    grid-gap: 10px;
-    grid-template: repeat(4, 1fr) /repeat(3,1fr); 
-  
+    grid-gap: 2px;
+    grid-template: 60px 3fr 1fr /repeat(3,1fr); 
+    
     /****************************************
     *                                       *
     *     SINTAXIS PARA GRID TEMPLATE*      *
@@ -22,19 +22,30 @@ html,body{
 }
 
 
-.header{
-    grid-area: header;
-}
-.footer{
-    grid-area: footer;
-}
-
-
 .item{
     background-color: aqua;
     border:1px solid tomato !important;
-    padding: 10px;
+/*    padding: 10px;*/
 }
+
+.item:nth-of-type(1){
+    grid-column: 1/-1 ;
+}
+
+.item:nth-of-type(2){
+    grid-column:1/-1; 
+    
+}
+.item:nth-of-type(5){
+    background:blue;
+    
+    grid-template:; 
+}
+
+.item.item{
+    grid-template: 30px 30px 200px;
+}
+/*
 
 .item:nth-of-type(1){
     background: blue;
@@ -51,6 +62,7 @@ html,body{
     background: yellow;
     grid-column: 2/ -1;
 }
+*/
 
 
 
