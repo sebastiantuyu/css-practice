@@ -2,13 +2,14 @@ html,body{
     font-family:monospace;
     width: 100%;
     height: 100%;
-    padding: 0;
-    margin: 0;
+    margin: 0px;
 }
 
 
 .container{
     display: grid;
+    height: 100vh;
+    
 /*    grid-template-columns:25% 50% 25%;*/
 /*    grid-template-rows: 300px 300px 20% 10% ;*/
 
@@ -20,15 +21,26 @@ html,body{
     *****************************************/
     
 /*    grid-template: 300px  100px  100px / repeat(3,1fr) ; */
-    grid-template:  300px  100px  100px/ minmax(200px,1fr) 1fr 1fr; 
+    grid-template:  100px 1fr 150px/ 200px 1fr; 
 /*    grid-column-gap: 30px;*/
 /*    grid-row-gap: 30px;*/
     grid-gap: 10px;
+    grid-template-areas: "header header"
+                         "left contenido"
+                         "footer footer";
+}
+
+
+.header{
+    grid-area: header;
+}
+.footer{
+    grid-area: footer;
 }
 
 
 .item{
-    background-color: azure;
+    background-color: aqua;
     border:1px solid tomato !important;
     padding: 10px;
 /*    display: grid;*/
@@ -38,8 +50,6 @@ html,body{
     background: blue;
     overflow: auto;
     display: grid;
-    grid-template: 50px   50px  50px/  200px  200px  200px ; 
-
 }
 
 .item .item {
