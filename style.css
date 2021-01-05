@@ -19,8 +19,11 @@ html,body{
     *      grid-template: filas / columnas  *
     *****************************************/
     
-    grid-template: 300px  100px  100px / 50% 200px 100px ; 
-    
+/*    grid-template: 300px  100px  100px / repeat(3,1fr) ; */
+    grid-template:  300px  100px  100px/ minmax(200px,1fr) 1fr 1fr; 
+/*    grid-column-gap: 30px;*/
+/*    grid-row-gap: 30px;*/
+    grid-gap: 10px;
 }
 
 
@@ -35,11 +38,11 @@ html,body{
     background: blue;
     overflow: auto;
     display: grid;
-    grid-template: 50px   50px  50px/  50px  50px  50px ; 
+    grid-template: 50px   50px  50px/  200px  200px  200px ; 
 
 }
 
-.item item {
+.item .item {
     background: yellow;
 }
 
