@@ -9,25 +9,16 @@ html,body{
 .container{
     display: grid;
     height: 100vh;
-    
-/*    grid-template-columns:25% 50% 25%;*/
-/*    grid-template-rows: 300px 300px 20% 10% ;*/
-
+    grid-gap: 10px;
+    grid-template: repeat(4, 1fr) /repeat(3,1fr); 
+  
     /****************************************
     *                                       *
     *     SINTAXIS PARA GRID TEMPLATE*      *
     *                                       *  
-    *      grid-template: filas / columnas  *
+    *    grid-template: filas / columnas    *
     *****************************************/
     
-/*    grid-template: 300px  100px  100px / repeat(3,1fr) ; */
-    grid-template:  100px 1fr 150px/ 200px 1fr; 
-/*    grid-column-gap: 30px;*/
-/*    grid-row-gap: 30px;*/
-    grid-gap: 10px;
-    grid-template-areas: "header header"
-                         "left contenido"
-                         "footer footer";
 }
 
 
@@ -43,18 +34,26 @@ html,body{
     background-color: aqua;
     border:1px solid tomato !important;
     padding: 10px;
-/*    display: grid;*/
 }
 
-.item:nth-of-type(4){
+.item:nth-of-type(1){
     background: blue;
-    overflow: auto;
-    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
-.item .item {
-    background: yellow;
+.item:nth-of-type(8){
+    background: blue;
+    grid-column: 1/4;
 }
+
+.item:nth-of-type(7){
+    background: yellow;
+    grid-column: 2/ -1;
+}
+
+
+
 
 
 
