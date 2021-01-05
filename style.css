@@ -9,11 +9,46 @@ html,body{
 
 .container{
     display: grid;
-    grid-template-columns:25% 50% 25%;
+/*    grid-template-columns:25% 50% 25%;*/
+/*    grid-template-rows: 300px 300px 20% 10% ;*/
+
+    /****************************************
+    *                                       *
+    *     SINTAXIS PARA GRID TEMPLATE*      *
+    *                                       *  
+    *      grid-template: filas / columnas  *
+    *****************************************/
+    
+    grid-template: 300px  100px  100px / 50% 200px 100px ; 
+    
 }
 
 
 .item{
     background-color: azure;
     border:1px solid tomato !important;
+    padding: 10px;
+/*    display: grid;*/
 }
+
+.item:nth-of-type(4){
+    background: blue;
+    overflow: auto;
+    display: grid;
+    grid-template: 50px   50px  50px/  50px  50px  50px ; 
+
+}
+
+.item item {
+    background: yellow;
+}
+
+
+
+
+
+
+
+
+
+
