@@ -148,9 +148,29 @@ body,html{ font-family: monospace;margin:0; width: 100%; height: 100%;}
     margin-left: 0.5em;
 }
 
+.menu-help{
+    display:flex;
+}
+.menu-help a{
+    height: fit-content;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.menu-help a img{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 50%;
+    margin: 0;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; 
+}
 
-
-
+.menu-help a img:hover{
+    width:60%; 
+}
 
 
 
