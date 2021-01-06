@@ -27,19 +27,18 @@ body,html{ font-family: monospace;margin:0; width: 100%; height: 100%;}
     display: grid;
     grid-template-columns:repeat(3,1fr);
     grid-template-rows: 30px 30%; 
-    grid-auto-flow: column;
+    grid-auto-rows:  30px 30%;
     grid-gap:20px;
+    overflow-y: auto;
 }
 
-
-.s-item{
-    display:block;
-}
 .section-title{
     grid-column: 1/-1;
     display: flex;
-    justify-content: center;
+    padding-left: 25px;
+    justify-content: flex-start;
     align-items: center;
+    font-size: 25px;
 }
 
 .m-image{
@@ -48,22 +47,41 @@ body,html{ font-family: monospace;margin:0; width: 100%; height: 100%;}
 
 .m-image img{
         width: 100%;
+    vertical-align: top;
 }
-
+.movie{
+    padding-left: 15px;
+    position: relative;
+    display: block;
+    overflow-y: hidden;
+}
 .m-overlay{
     position: absolute;
-    background-color: rgba(200,200,200,1);
+    padding: 10px;
+    background-color: rgba(0,0,0,0.8);
     top:0;
-    right:0;
+/*    left:-100%;*/
+/*
+    left: 0;
+    right: 0;
+*/
     bottom:0;
-    left:0;
-    display: none;
+    display: flex;
+    opacity: 0;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    color: white;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+/*    backdrop-filter:blur(8px;)*/
 }
 
-.s-item:hover .m-overlay{
-    display: flex;
+.movie:hover .m-overlay{
+    
+    opacity: 1;
 }
 
 
