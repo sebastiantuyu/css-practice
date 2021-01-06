@@ -14,22 +14,46 @@ body,html{ font-family: monospace;margin:0; width: 100%; height: 100%;}
 .a{grid-area:a;}
 .b{grid-area:b;}
 .c{grid-area:c;}*/
-
+.sub-item{
+    display: flex;
+    justify-content: center;
+/*    align-content: center;*/
+}
+.sub-item a{
+    height: fit-content;
+    align-self: center;
+}
+.sub-item a img{
+    max-width: 120px;
+    display: flex;
+    }
 .a{
-    background-color: blue;
+    background-color: #fff;
     grid-column:1/-1 ;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr; 
+    
+    
+    -webkit-box-shadow: 0px 10px 15px 1px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0px 10px 15px 1px rgba(0,0,0,0.26);
+    box-shadow: 0px 10px 15px 1px rgba(0,0,0,0.26);
 }
 .b{
-    background-color: red;
+    background-color: #AE121C;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 15%);
 }
 .c{
-    background-color: green;
+    background-color: #bebebe;
     display: grid;
     grid-template-columns:repeat(3,1fr);
     grid-template-rows: 30px 30%; 
     grid-auto-rows:  30px 30%;
     grid-gap:20px;
     overflow-y: auto;
+    padding-top: 10px;
+    box-shadow: inset 0px 16px 17px rgba(0, 0, 0, 0.15);
 }
 
 .section-title{
@@ -48,15 +72,20 @@ body,html{ font-family: monospace;margin:0; width: 100%; height: 100%;}
 .m-image img{
         width: 100%;
     vertical-align: top;
+    border-radius: 10px;
+
 }
 .movie{
     padding-left: 15px;
+/*    border-radius: 8px;*/
     position: relative;
     display: block;
     overflow-y: hidden;
 }
 .m-overlay{
     position: absolute;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
     padding: 10px;
     background-color: rgba(0,0,0,0.8);
     top:0;
@@ -85,9 +114,39 @@ body,html{ font-family: monospace;margin:0; width: 100%; height: 100%;}
 }
 
 
+.movie-search{
+    display: flex;
+    height: 50%;
+    width: 80%;
+    justify-content: center;
+    align-self:center;
+    border-radius: 8px;
+    border:1px solid gray;
+}
 
 
+.sub-item:nth-of-type(3){
+    display: flex;
+/*    background-color: antiquewhite;*/
+/*    justify-content: space-around;*/
+}
 
+.user-img{
+    display: flex;
+    align-self: center;
+    width: 25%;
+    height: 60px;
+    overflow: hidden;
+/*    height: 80%;*/
+    border-radius: 50%;
+    background-color: darkslategrey;
+}
+.user-name{
+    display: flex;
+    align-self: center;
+    font-size: 20px;
+    margin-left: 0.5em;
+}
 
 
 
