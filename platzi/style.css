@@ -1,0 +1,91 @@
+body{
+    font-family: monospace;
+}
+
+.hero{
+    background-color:#23475b;
+    color:white;
+    padding: 32px 10px;
+    display: grid;
+    grid-template-columns:minmax(auto,1024px); 
+    justify-content: center;
+}
+
+.hero-container{
+    display:grid;
+    grid-template-columns: 70px 1fr 320px;
+    grid-gap:10px;
+    grid-area: "badge content form"
+               "badge"
+                "badge";
+}
+
+.logo{
+    grid-area:badge;
+}
+
+
+.titulo{
+    font-size: 36px;
+    display: flex;
+    margin:0;
+    align-items: center;
+}
+
+form{
+    text-align: center;
+    color: black;
+    background: rgba(255,255,255,0.9);
+    padding: 0.15em;
+    border-radius: 5px;
+}
+
+form input{
+    width:100%;
+    padding: 10px 0;
+    font-size: 15px;
+    border: 1px solid #dbdbe2;
+    box-sizing: border-box;
+}
+
+
+form p{
+    font-size:20px;
+    color:#3a3b3f;
+    margin-bottom: 1em;
+}
+
+form button{
+background: #98ca3f;
+    color:white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    border:none;
+    border-bottom:5px solid #6d932b; 
+}
+
+
+.countdown p{
+    font-size: 16px;
+    text-align: center;
+    padding: 0px;
+}
+
+
+.countdown span{
+    font-size: 33px;
+}
+
+.countdown span:after{
+    content: ':';
+    display: inline-block;
+}
+
+.countdown span:last-child:after{
+    display:none;
+}
+
+
+
+
