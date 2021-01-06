@@ -9,15 +9,20 @@ body{
     display: grid;
     grid-template-columns:minmax(auto,1024px); 
     justify-content: center;
+    border-radius: 7px;
 }
 
 .hero-container{
     display:grid;
     grid-template-columns: 70px 1fr 320px;
     grid-gap:10px;
-    grid-area: "badge content form"
-               "badge"
-                "badge";
+    grid-template-areas: "badge titulo form"
+                         ". description form"
+                         ". count form";
+}
+
+.countdown{
+    grid-area:count;
 }
 
 .logo{
@@ -25,7 +30,17 @@ body{
 }
 
 
+.descc{
+    grid-area: description;
+}
+.form{
+    grid-area: form;
+}
+.badge img{
+    width: 70px;
+}
 .titulo{
+    grid-area: titulo;
     font-size: 36px;
     display: flex;
     margin:0;
@@ -36,13 +51,14 @@ form{
     text-align: center;
     color: black;
     background: rgba(255,255,255,0.9);
-    padding: 0.15em;
+    padding: 15px;
     border-radius: 5px;
 }
 
 form input{
     width:100%;
     padding: 10px 0;
+    margin-bottom: 5px;
     font-size: 15px;
     border: 1px solid #dbdbe2;
     box-sizing: border-box;
@@ -84,6 +100,16 @@ background: #98ca3f;
 
 .countdown span:last-child:after{
     display:none;
+}
+
+@media screen and (max-width:768px){
+    .hero-container{
+        grid-template-columns: 70px 1fr;
+        grid-template-areas: "badge titulo"
+                         ". description"
+                         ". count"
+                         "form form";
+    }
 }
 
 
