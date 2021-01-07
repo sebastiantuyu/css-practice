@@ -9,6 +9,8 @@
 </head>
 <body>
   
+    <div class="dark" id="dark"></div>
+    <div class="menu" id="menu"></div>
    <section class="grid">
        <div class="item a">
            <div class="pl-logo">
@@ -17,7 +19,7 @@
                    </a>
                                  
            </div>
-           <div class="off-set"></div>
+           <div class="off-set" ></div>
             
             <div class="pl-menu">         
                    <div class="pl-clases"><b>Clases</b></div>
@@ -30,16 +32,16 @@
                            <img src="user-pic.jpg" alt="">
                        </a>
                        <span class="user-rank">2,415</span>
-                       <span class="icon-circle-down" ></span>
+                       <span class="icon-circle-down" id="i-menu" style="transform-origin: center center"></span>
                    </div>
                    <div class="pl-notif">
                        <span class="icon-notif"></span>
                    </div>
                    <div class="pl-search">
                        <input type="text" class="search-bar" placeholder="  Buscar en platzi">
-                       <button type="submit" class="search-btn">
-                           A
-                       </button>
+                       <div type="submit" class="search-btn">
+                           <span class="icon-search"></span>
+                       </div>
                    </div>
             </div>
            
@@ -169,6 +171,7 @@
         let allof = [btn1,btn2,btn3,btn4];
         
         function changeColor(){
+            console.log("ok");
             if (like.style.color != "var(--m-green)"){
                     like.style.color = "var(--m-green)";
                 }else{
@@ -211,6 +214,25 @@
              change(3,true);
         }
         function show(){
+            var back = document.getElementById("dark");
+            var menu = document.getElementById("menu");
+            var logo = document.getElementById("i-menu");
+            if (menu.style.opacity==1){
+            setTimeout(function(){  
+                menu.style.visibility ="collapse"; 
+                back.style.visibility ="collapse"; 
+                         }, 100);
+                menu.style.opacity=0;
+                back.style.opacity=0;
+                logo.classList.remove("rotate");
+                                      }
+            else{
+            setTimeout(function(){ 
+                    menu.style.visibility ="visible"; 
+                    back.style.visibility ="visible"; 
+                        }, 100);
+                menu.style.opacity=1;back.style.opacity=1;
+                logo.classList.add("rotate");}
             
         }
         
