@@ -33,7 +33,40 @@ body,html{
     background: white;
 /*    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.15);*/
     box-shadow: inset 2px 12px 6px -6px rgba(0,0,0,0.15);
+    display: inline-flex;
 }
+
+
+.sub-item-curse-tit{
+    
+}
+.curso-logo{
+/*    display: inline-flex;*/
+    height:32px;
+    width:32px;
+    overflow: hidden;
+    padding-left:3%;
+    padding-right:1%;
+    align-self: center;
+}
+.curso-logo img{
+    display: flex;
+    align-items: center;
+    width:100%;
+}
+
+.s-sub-item{
+    align-self: center;
+    font-family:sans-serif;
+    font-style: bold;
+    color: #0791e6;
+}
+
+
+
+
+
+
 .sub-item-b{ background-color: var(--grey);}
 
 .btn-section{
@@ -91,7 +124,6 @@ box-shadow: 9px 9px 8px -5px rgba(0,0,0,0.25);
     width: 30px;height: 30px;
     align-self: center;
 }
-
 
 
 .self-comt.feed{
