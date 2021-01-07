@@ -1,3 +1,4 @@
 *.log
+!user-pi.jpg 
 *.jpg
 *.png
