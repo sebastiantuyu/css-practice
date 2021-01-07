@@ -17,17 +17,32 @@
        <div class="item d">
            <div class="sub-item-a">
                 <div class="title-course">
-                                  <div class="curso-logo">
+                   <div class="curso-logo">
                   <img src="https://static.platzi.com/media/achievements/1229-dbff8a06-bcca-48e9-98e3-1fd76d6216f3.png" alt="">
               </div>
                <div class="s-sub-item"><b>Curso de CSS Grid</b></div>
                
                 </div>
                 <div class="course-extras">
-                    <div class="aportes"><span class="ap-txt">Aportes </span> <span class="ap-num"> 15</span> </div>
-                    <div class="preguntas">Preguntas</div>
-                    <div class="marcadores">Marcadores</div>
-                    <div class="archivos">Archivos <br>y enlaces</div>
+                    <div class="aportes" onclick="aportes()" id="apor">
+                    <span class="ap-txt">Aportes </span>
+                     <span class="ap-num"> 15</span> 
+                     </div>
+ 
+                              <div class="aportes" id="quest"  onclick="quest()">
+                    <span class="ap-txt" >Preguntas </span>
+                     <span class="ap-num"> 15</span> 
+                     </div>
+ 
+                          <div class="aportes" id="mark" onclick="marks()">
+                    <span class="ap-txt">Marcadores</span>
+                     <span class="ap-num"> 15</span> 
+                     </div>
+ 
+                          <div class="aportes" id="files" onclick="files()">
+                    <span class="ap-txt">Archivos y Enlaces</span>
+                     <span class="ap-num last"> 15</span> 
+                     </div>
                 </div>
            </div>
            <div class="sub-item-b">
@@ -72,7 +87,7 @@
                 </div>
                 <div class="like-share">
                     <span class="icon-reply"></span>
-                    <span class="icon-heart"></span>
+                    <span class="icon-heart" id="like"></span>
                     <span class="like-quant">7</span>
                     <span class="icon-share2"></span>
                 </div>
@@ -85,5 +100,59 @@
        </div>
    </section>
     
+    <script>
+        var like = document.getElementById("like");
+        like.addEventListener('click',changeColor);
+        
+        var btn1 = document.getElementById("apor");
+        var btn2 = document.getElementById("quest");
+        var btn3 = document.getElementById("mark");
+        var btn4 = document.getElementById("files");
+        let allof = [btn1,btn2,btn3,btn4];
+        
+        function changeColor(){
+            if (like.style.color != "var(--m-green)"){
+                    like.style.color = "var(--m-green)";
+                }else{
+                    like.style.color = "grey";
+
+                }
+        }
+        // APORTES MARKS QUEST FILES
+        
+        function change(num,state){
+            if(state){
+            allof[num].style.borderBottomColor = "var(--btn-blue)";
+            }else{
+            allof[num].style.borderBottomColor = "lightgray";    
+            }
+        }
+        function aportes(){
+            change(0,true);
+            change(1,false);
+            change(2,false);
+            change(3,false);
+        }
+        function quest(){
+             change(0,false);
+             change(1,true);
+             change(2,false);
+             change(3,false);
+  
+        }
+        function marks(){
+             change(0,false);
+             change(1,false);
+             change(2,true);
+             change(3,false); 
+        }
+        function files(){
+             change(0,false);
+             change(1,false);
+             change(2,false);  
+             change(3,true);
+        }
+        
+    </script>
 </body>
 </html>
