@@ -24,7 +24,78 @@ body,html{
     grid-template-columns: 30px 9fr 6fr;
 }
 .item{background-color: white;}
-.a{grid-column: 1/-1;background-color:var(--m-blue); }
+.a{
+    grid-column: 1/-1;background-color:var(--m-blue);
+    display:grid;
+    grid-template: 1fr / 250px 1fr 3fr;
+}
+
+
+
+.pl-logo{width: 100%;display: flex;overflow: hidden;}
+.pl-logo-url{height: 100%;display: flex;align-content: center;}
+.pl-logo-url img{
+    height: 100%;vertical-align: top;
+/*    margin-top: -6.5px;*/
+/*    align-self: stretch;*/
+    padding-left: 10%;
+}
+
+.pl-menu{
+    display: inline-flex;
+    padding-bottom: 0.35em;
+    justify-content: flex-end;
+    color: white;
+}
+
+.pl-clases{padding: 0.8em;align-self: center;}
+.pl-blog{padding:0.8em;align-self: center;}
+.pl-foro{padding:0.8em;align-self: center;}
+.pl-agenda{padding:0.8em;align-self: center;}
+.pl-tv{padding:0.8em;align-self: center;
+    border-right:1px solid white; 
+    height: 30%;
+/*    padding-bottom: em;*/
+}
+.pl-user{padding:0.8em;align-self: flex-end;}
+.pl-notif{padding:0.8em;align-self: flex-end;}
+.pl-search{padding:0.8em;align-self: flex-end;}
+
+.pl-user{
+    align-self: center;
+    display: inline-flex;
+    padding: 0 0 0 0.5em;
+    
+}
+.pl-user-pic{display:flex;width: 100%;}
+.pl-user-pic img{
+    width: 25px;height: 25px; 
+    border-radius:50%;
+}
+
+.user-rank{
+    align-self: center;
+    padding-left: 0.5em;
+}
+
+
+.search-bar{
+    background: white;
+    border:0;
+    padding: 0;
+    height: 30px;
+    align-self: center;
+/*    height: 100%;*/
+    border-radius: 4px;
+    margin-right: 0px;
+}
+
+.search-btn{
+    margin-left: 0;
+    background: var(--m-green);
+    border:none;
+    height: 100%;
+}
 .b{ background: var(--c-blue);}
 .d{
     display: grid;
