@@ -4,6 +4,7 @@
     --btn-blue:#0791E6;
     --c-blue:#0791e6;
     --dark-grey:#2a282a;
+    --m-green:#98ca3f;
 }
 
 body,html{
@@ -72,25 +73,66 @@ box-shadow: 9px 9px 8px -5px rgba(0,0,0,0.25);
     height: 50px;
     width: 95%;
     background: white;
+    display:inline-flex;
+    overflow: hidden;
+/*    display: flex;*/
 }
-
-
 .user-photo{
-    
+    display: flex;
+    width: 10%;
+    align-self: center;
+    justify-content: center;
+/*    height: fit-content;*/
 }
+
+.user-photo-url{
+    position: relative;
+    border-radius: 50%;
+    width: 30px;height: 30px;
+    align-self: center;
+}
+
+
 
 .self-comt.feed{
-    height: 200px;
+    height: 160px;
     display: grid;
-    grid-template: 1fr 2fr 1fr/1fr;
+    grid-template: 1fr 1.2fr 1fr/1fr;
 }
-
+.user-comment{
+    width: 80%;
+    display: flex;
+    align-content: center;
+}
+.user-comment input{
+    border:none;
+    align-self: center;
+    
+}
 
 .username{
     font-size: 15px;
     color:black;
     
 }
+
+
+.rank-ponits{ 
+    align-self: center;padding-right:0.2em;
+    color: gray;
+    font-size: 15px;
+}
+.rank-logo{
+    font-family: monospace;
+/*    font-style: italic;*/
+    font-size: 18px;
+    color:white;
+    padding-left:0.25em ;
+    padding-right:0.28em ;
+    background-color: var(--m-green);
+    border-radius:50%;
+    
+    align-self: center;}
 
 .media{
     display:grid;
@@ -135,6 +177,24 @@ box-shadow: 9px 9px 8px -5px rgba(0,0,0,0.25);
 
 }
 
+.comment{
+    padding-left: 0.8em;
+    padding-right: 1em;
+    font-size: 13px;
+    color: #4a4a4a;
+    align-self: center;
+}
+
+.like-share{
+    align-self: center;
+/*    padding-left: 1em;*/
+}
+.icon-reply {padding-left: 1em;}
+.icon-heart {padding-left: 1em;}
+.icon-share2 {padding-left: 1em;}
+.like-quant{
+    color: grey;
+}
 
 
 
