@@ -9,7 +9,6 @@
 </head>
 <body>
   
-  
    <section class="grid">
        <div class="item a">
            <div class="pl-logo">
@@ -26,12 +25,12 @@
                    <div class="pl-foro"><b>Foro</b></div>
                    <div class="pl-agenda"><b>Agenda</b></div>
                    <div class="pl-tv"><b>TV</b></div>
-                   <div class="pl-user">
+                   <div class="pl-user" id="drop">
                        <a href="#" class="pl-user-pic">
                            <img src="user-pic.jpg" alt="">
                        </a>
                        <span class="user-rank">2,415</span>
-                       <span class="icon-drop"></span>
+                       <span class="icon-circle-down" ></span>
                    </div>
                    <div class="pl-notif">
                        <span class="icon-notif"></span>
@@ -57,7 +56,9 @@
                 
                 <div class="desc-helper">
                 <div class="desc-prb">Reportar un problema</div>
-                <div class="desc-next">Siguiente</div>
+                <div class="desc-next">
+                <span class="icon-next2"></span>
+                Siguiente</div>
                 </div>
             </div>
             <div class="rep-autor">
@@ -156,7 +157,10 @@
     
     <script>
         var like = document.getElementById("like");
+        var drop = document.getElementById("drop");
+        
         like.addEventListener('click',changeColor);
+        drop.addEventListener('click',show);
         
         var btn1 = document.getElementById("apor");
         var btn2 = document.getElementById("quest");
@@ -206,6 +210,10 @@
              change(2,false);  
              change(3,true);
         }
+        function show(){
+            
+        }
+        
         
     </script>
 </body>

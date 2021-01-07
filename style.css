@@ -31,6 +31,8 @@ body,html{
 }
 
 
+.icon-next2{color:white;font-size: 20px;}
+.icon-circle-down{color: white; align-self: center;padding-left: 0.5em;}
 
 .pl-logo{width: 100%;display: flex;overflow: hidden;}
 .pl-logo-url{height: 100%;display: flex;align-content: center;}
@@ -62,6 +64,7 @@ body,html{
 .pl-search{padding:0.8em;align-self: flex-end;}
 
 .pl-user{
+    cursor: pointer;
     align-self: center;
     display: inline-flex;
     padding: 0 0 0 0.5em;
